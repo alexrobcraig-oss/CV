@@ -209,7 +209,6 @@
     <button class="tab-btn" onclick="showTab('portfolio',this)">🎬 Portfolio</button>
     <button class="tab-btn" onclick="showTab('skills',this)">🛠 Skills</button>
     <button class="tab-btn" onclick="showTab('education',this)">🎓 Education</button>
-    <button class="tab-btn" onclick="showTab('beyond',this)">🌍 Beyond Work</button>
     <button class="tab-btn" onclick="showTab('contact',this)">✉️ Contact</button>
   </nav>
 
@@ -380,20 +379,6 @@
     </div>
   </div>
 
-  <!-- BEYOND WORK -->
-  <div id="tab-beyond" class="tab-content">
-    <div class="section-header"><span class="section-icon">🌍</span><h2>The Human Behind the CV</h2><div class="section-line"></div></div>
-    <p style="color:var(--muted);font-size:14px;margin-bottom:24px;line-height:1.7;">A CV captures what I've done. This section tries to convey who I actually am, because the two things are not always the same document.</p>
-    <div class="interest-grid">
-      <div class="interest-card"><span class="interest-emoji">📰</span><h3>Political Thinker</h3><p>Politics and political philosophy are genuine, long-standing passions of mine, not CV filler. This conviction led me to found <span class="accent">Agora Helvetica</span>, a newsletter on Swiss political affairs that reached 2,000+ readers in 90 days on the strength of its writing alone.</p></div>
-      <div class="interest-card"><span class="interest-emoji">🌿</span><h3>Environmentalist at Heart</h3><p>My Oxford MSc in Environmental Governance wasn't a strategic credential; it reflected a genuine conviction. The fact that my career has since touched terrain-mapping drones and coastal carbon markets is not coincidence; it's <span class="accent">consistency of values</span>.</p></div>
-      <div class="interest-card"><span class="interest-emoji">✈️</span><h3>Deliberate Expat</h3><p>I chose Switzerland deliberately, and I've committed to it, including pursuing <span class="accent">B2 German</span> during my career break. Being the foreigner in the room and finding a way to belong there is a skill I've come to value.</p></div>
-      <div class="interest-card"><span class="interest-emoji">⚽</span><h3>Football &amp; Golf</h3><p>One sport demands that you subordinate yourself to the collective; the other demands total accountability to yourself. Both turn out to be <span class="accent">useful preparation</span> for a working life that requires you to switch between the two without losing your footing.</p></div>
-      <div class="interest-card"><span class="interest-emoji">🤖</span><h3>Genuine AI Enthusiast</h3><p>My interest in AI isn't trend-driven. It preceded the current wave and is grounded in hands-on use. I spent a career break building <span class="accent">real working fluency</span> in LLM workflows, agent frameworks, and automation tools. I find it genuinely exciting, which I think shows in the quality of the work.</p></div>
-      <div class="interest-card"><span class="interest-emoji">👥</span><h3>Community Builder</h3><p>I've always invested in the people around me, building team cultures, growing newsletter communities, maintaining friendships across cities and industries. To my mind, <span class="accent">genuine human connection</span> at work isn't a perk; it's what makes the work worth doing.</p></div>
-    </div>
-  </div>
-
   <!-- CONTACT -->
   <div id="tab-contact" class="tab-content">
     <div class="avail-banner">
@@ -464,7 +449,7 @@
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:32px;">
 
-      <a href="https://newsletter.agorahelvetica.ch/" target="_blank" style="text-decoration:none;">
+      <a href="https://agorahelvetica.ch" target="_blank" style="text-decoration:none;">
         <div class="card" style="height:100%;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='rgba(0,201,177,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
             <div style="background:linear-gradient(135deg,var(--teal),var(--violet));border-radius:10px;padding:10px 13px;font-size:20px;line-height:1;">📰</div>
@@ -475,7 +460,7 @@
           <div class="tag-wrap">
             <span class="tag teal">Political Commentary</span><span class="tag violet">Switzerland</span><span class="tag coral">Founder</span>
           </div>
-          <div style="margin-top:14px;font-size:12px;color:var(--teal);font-weight:600;">newsletter.agorahelvetica.ch →</div>
+          <div style="margin-top:14px;font-size:12px;color:var(--teal);font-weight:600;">agorahelvetica.ch →</div>
         </div>
       </a>
 
@@ -528,6 +513,21 @@
             <span class="tag teal">Web Build</span><span class="tag violet">Drone Surveying</span><span class="tag coral">Co-Founded</span>
           </div>
           <div style="margin-top:14px;font-size:12px;color:var(--teal);font-weight:600;">altispectra.com →</div>
+        </div>
+      </a>
+
+      <a href="https://agorahelvetica.ch" target="_blank" style="text-decoration:none;">
+        <div class="card" style="cursor:pointer;" onmouseover="this.style.borderColor='rgba(0,201,177,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+            <div style="background:linear-gradient(135deg,var(--teal),var(--violet));border-radius:10px;padding:10px 13px;font-size:20px;line-height:1;">📰</div>
+            <span style="font-size:11px;color:var(--teal);background:rgba(0,201,177,0.1);border:1px solid rgba(0,201,177,0.25);border-radius:100px;padding:3px 10px;">Website</span>
+          </div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">Agora Helvetica</div>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px;">I founded Agora Helvetica and built its website, the home for a political newsletter on Swiss and European affairs written for an English-speaking audience. The site is designed for serious readers who want context, not churn.</p>
+          <div class="tag-wrap">
+            <span class="tag teal">Web Build</span><span class="tag violet">Newsletter</span><span class="tag coral">Founded</span>
+          </div>
+          <div style="margin-top:14px;font-size:12px;color:var(--teal);font-weight:600;">agorahelvetica.ch →</div>
         </div>
       </a>
 
