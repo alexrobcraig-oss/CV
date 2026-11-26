@@ -28,6 +28,7 @@
     .no-print, #print-btn-wrap { display: none !important; }
     body { background: #fff; color: #000; font-size: 11pt; }
     .card { background: #f8f8f8 !important; border: 1px solid #ddd !important; box-shadow: none !important; }
+    .card.current { border-left: 4px solid #00c9b1 !important; }
     .hero { background: #1a3550 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     * { color-adjust: exact; -webkit-print-color-adjust: exact; }
     .tab-content { display: block !important; }
@@ -89,6 +90,9 @@
   .timeline-item { position: relative; padding-left: 50px; margin-bottom: 24px; }
   .timeline-dot { position: absolute; left: 9px; top: 6px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, var(--teal), var(--violet)); box-shadow: 0 0 0 3px var(--navy), 0 0 10px rgba(0,201,177,0.4); }
   .timeline-item .card { margin-bottom: 0; }
+  .card.current { background: linear-gradient(135deg, rgba(0,201,177,0.11), rgba(132,94,247,0.09)), var(--card); border-color: rgba(0,201,177,0.35); box-shadow: 0 6px 24px rgba(0,201,177,0.08); }
+  .card.current:hover { border-color: rgba(0,201,177,0.55); }
+  .card.current .job-date { color: var(--teal); background: rgba(0,201,177,0.12); border: 1px solid rgba(0,201,177,0.3); }
   .job-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
   .job-title { font-size: 15px; font-weight: 700; color: var(--text); }
   .job-company { font-size: 13px; color: var(--teal); font-weight: 600; }
@@ -125,6 +129,7 @@
   .achievement-icon { font-size: 26px; flex-shrink: 0; line-height: 1; }
   .achievement-text strong { display: block; font-size: 14px; color: var(--text); margin-bottom: 4px; }
   .achievement-text span { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+  .achievement-text span strong { display: inline; font-size: inherit; margin-bottom: 0; }
 
   /* EDUCATION */
   .edu-card { display: flex; gap: 16px; align-items: flex-start; }
@@ -183,7 +188,7 @@
       <h1>Alexander Craig</h1>
       <div class="tagline">AI &amp; Data Strategy · Marketing Leadership · Oxford University Educated · Zürich-based</div>
       <div class="hero-meta">
-        <span class="meta-chip"><span class="status-dot"></span> Open to opportunities</span>
+        <span class="meta-chip"><span class="status-dot"></span> Open to conversations</span>
         <span class="meta-chip">📍 Zürich, Switzerland</span>
         <span class="meta-chip">🇨🇭 C-Permit · No Sponsorship Needed</span>
         <span class="meta-chip">🌐 English (Native) · German (B2)</span>
@@ -195,9 +200,9 @@
 <div class="stats-row">
   <div class="stat-card"><div class="stat-num">6+</div><div class="stat-label">Years in Tech</div></div>
   <div class="stat-card"><div class="stat-num">✍️</div><div class="stat-label">Newsletter Founder</div></div>
-  <div class="stat-card"><div class="stat-num">25</div><div class="stat-label">Webinars Hosted</div></div>
+  <div class="stat-card"><div class="stat-num">22</div><div class="stat-label">Webinars Hosted</div></div>
   <div class="stat-card"><div class="stat-num">40%</div><div class="stat-label">Web Traffic Growth</div></div>
-  <div class="stat-card"><div class="stat-num">$1M</div><div class="stat-label">Fundraising Secured</div></div>
+  <div class="stat-card"><div class="stat-num" style="white-space:nowrap;font-size:clamp(20px,5.6vw,28px);">~CHF 10m</div><div class="stat-label">Pipeline Contributed</div></div>
   <div class="stat-card"><div class="stat-num">17</div><div class="stat-label">Int'l Events Led</div></div>
 </div>
 
@@ -214,25 +219,17 @@
 
   <!-- PROFILE -->
   <div id="tab-profile" class="tab-content active">
-    <div class="avail-banner">
-      <span class="icon">🚀</span>
-      <div>
-        <strong>Open to new opportunities</strong>
-        <span>Six years at the intersection of technology, marketing, and strategy. Actively looking for the right next role in Zürich.</span>
-      </div>
-    </div>
     <div class="section-header"><span class="section-icon">👤</span><h2>Who I Am</h2><div class="section-line"></div></div>
     <p class="profile-intro">
-      I have spent six years working across the full spectrum of technology marketing and business development, from R&amp;D testing in Wingtra's drone laboratories to leading communications strategy at a Swiss climate start-up. Oxford University gave me the analytical framework; the Swiss start-up ecosystem gave me the urgency to apply it. I move fluidly between strategic planning and hands-on execution, and I take genuine satisfaction in building things that last: campaigns, systems, communities, and brands. My current focus is AI: not as a buzzword, but as a set of tools I have spent deliberate time learning to use well. I am convinced that professionals who develop real fluency in these technologies will operate at a meaningfully different level, and I intend to be one of them.
+      I have spent six years working across the full spectrum of technology marketing and business development, from R&amp;D testing in Wingtra's drone laboratories to leading communications strategy at a Swiss climate start-up, and now running global marketing programmes at Johnson Controls. Oxford University gave me the analytical framework; the Swiss start-up ecosystem gave me the urgency to apply it. I move fluidly between strategic planning and hands-on execution, and I take genuine satisfaction in building things that last: campaigns, systems, communities, and brands. My current focus is AI: not as a buzzword, but as a set of tools I have spent deliberate time learning to use well. I am convinced that professionals who develop real fluency in these technologies will operate at a meaningfully different level, and I intend to be one of them.
     </p>
     <div class="section-header"><span class="section-icon">🏆</span><h2>Key Achievements</h2><div class="section-line"></div></div>
     <div class="achievement-grid">
-      <div class="achievement-card"><span class="achievement-icon">🛩️</span><div class="achievement-text"><strong>Founded Enterprise Drone Survey Company</strong><span>Co-founded <strong style="color:var(--teal)">Altispectra</strong>, an enterprise-grade drone surveying and geospatial intelligence company serving the Swiss construction and infrastructure sectors.</span></div></div>
+      <div class="achievement-card"><span class="achievement-icon">🎓</span><div class="achievement-text"><strong>Oxford University</strong><span>MSc at Oxford University · BSc Top of Class at Manchester · Royal Geographical Society Fellowship Award.</span></div></div>
+      <div class="achievement-card"><span class="achievement-icon">🎙️</span><div class="achievement-text"><strong>Global Webcasts for ~12,000 People</strong><span>Run global webcasts and strategic communications for Johnson Controls' <strong style="color:var(--teal)">~12,000-person marketing and commercial organisation</strong>, aligning teams worldwide with leadership priorities.</span></div></div>
       <div class="achievement-card"><span class="achievement-icon">📰</span><div class="achievement-text"><strong>Founded Agora Helvetica</strong><span>Founded a political newsletter from scratch in Zürich, growing it to <strong style="color:var(--teal)">2,000+ subscribers</strong> in under three months, with a 92% average open rate.</span></div></div>
-      <div class="achievement-card"><span class="achievement-icon">🌍</span><div class="achievement-text"><strong>17 International Events</strong><span>Led and presented at 17 international trade exhibitions at Wingtra, averaging <strong style="color:var(--teal)">150 marketing-qualified leads per event</strong>.</span></div></div>
-      <div class="achievement-card"><span class="achievement-icon">📈</span><div class="achievement-text"><strong>40% Web Traffic Growth</strong><span>Grew Drone Harmony's web traffic by 40% and LinkedIn following by 36% YoY as Head of Marketing.</span></div></div>
-      <div class="achievement-card"><span class="achievement-icon">💰</span><div class="achievement-text"><strong>$1M Fundraising</strong><span>Secured $1M for Fair Carbon's Blue Catalyst Fund through targeted stakeholder communications and partnership development.</span></div></div>
-      <div class="achievement-card"><span class="achievement-icon">🎓</span><div class="achievement-text"><strong>Oxford University &amp; Manchester</strong><span>MSc at Oxford University · BSc Top of Class at Manchester · Royal Geographical Society Fellowship Award.</span></div></div>
+      <div class="achievement-card"><span class="achievement-icon">🌍</span><div class="achievement-text"><strong>~CHF 10m Pipeline</strong><span>Led and presented at 17 international trade exhibitions at Wingtra, averaging <strong style="color:var(--teal)">150 marketing-qualified leads per event</strong> and, together with our webinar programme, contributing to a <strong style="color:var(--teal)">~CHF 10m sales pipeline</strong>.</span></div></div>
+      <div class="achievement-card"><span class="achievement-icon">📈</span><div class="achievement-text"><strong>40% Web Traffic Growth</strong><span>Grew Drone Harmony's web traffic by 40% and LinkedIn following by 44% as Head of Marketing.</span></div></div>
       <div class="achievement-card"><span class="achievement-icon">🤖</span><div class="achievement-text"><strong>AI-Native Professional</strong><span>Dedicated a career break to building genuine fluency in AI agent workflows, LLM tooling, and automation, complemented by a Google Data Analytics Certificate.</span></div></div>
     </div>
     <br/>
@@ -252,31 +249,25 @@
     <div class="section-header"><span class="section-icon">💼</span><h2>Career History</h2><div class="section-line"></div></div>
     <div class="timeline">
 
-      <div class="timeline-item"><div class="timeline-dot"></div>
-        <div style="margin-bottom:4px;"><span class="job-date">May 2025 – Present</span></div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-          <div class="card" style="margin-bottom:0;">
-            <div class="job-header"><div><div class="job-title">Co-Founder</div><div class="job-company">Altispectra · Zürich</div></div></div>
-            <ul class="job-bullets">
-              <li>Co-founded an <strong>enterprise-grade drone surveying and geospatial intelligence company</strong> serving the Swiss construction and infrastructure sectors</li>
-              <li>Deliver <strong>RMSE-validated orthomosaics, LiDAR point clouds, and BIM-ready datasets</strong> referenced to CH1903+ / LV95</li>
-              <li>Lead UAS operations as a <strong>BAZL/FOCA-certified operator</strong> (PDRA-S01 Specific Category)</li>
-              <li>Built the company's <strong>website, brand identity, CRM, and go-to-market strategy</strong> from scratch</li>
-            </ul>
-            <div class="tag-wrap"><span class="tag teal">Drone Surveying</span><span class="tag violet">Geospatial Data</span><span class="tag coral">Entrepreneurship</span><span class="tag amber">BIM / LiDAR</span></div>
-          </div>
-          <div class="card" style="margin-bottom:0;">
-            <div class="job-header"><div><div class="job-title">Newsletter Founder</div><div class="job-company">Agora Helvetica · Self-directed</div></div></div>
-            <ul class="job-bullets">
-              <li>Founded a <strong>politically-focused English-language newsletter</strong> based in Switzerland</li>
-              <li>Grew to <strong>2,000+ subscribers in under 3 months</strong> with a 92% average open rate</li>
-              <li>Completed <strong>Google Data Analytics Professional Certificate</strong> (SQL, R, Tableau)</li>
-              <li>Intensive self-study in <strong>AI agent optimisation, LLM workflows, and automation tools</strong></li>
-            </ul>
-            <div class="tag-wrap"><span class="tag teal">AI/LLM Workflows</span><span class="tag violet">SQL &amp; R</span><span class="tag coral">Content Strategy</span><span class="tag amber">Newsletter Growth</span></div>
-          </div>
-        </div>
-      </div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="card current">
+        <div class="job-header"><div><div class="job-title">Senior Specialist, Marketing Programs</div><div class="job-company">Johnson Controls · Neuhausen</div></div><span class="job-date">May 2026 – Present</span></div>
+        <ul class="job-bullets">
+          <li>Redesigned the <strong>Global Marketing Community intranet portal</strong>, increasing usage by 65%</li>
+          <li>Run <strong>global webcasts and strategic communications</strong> for a marketing and commercial organisation of ~12,000 people worldwide, aligning teams with leadership priorities</li>
+        </ul>
+        <div class="tag-wrap"><span class="tag teal">Global Webcasts</span><span class="tag violet">Strategic Comms</span><span class="tag coral">Intranet Redesign</span><span class="tag amber">Enterprise Scale</span></div>
+      </div></div>
+
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="card current">
+        <div class="job-header"><div><div class="job-title">Newsletter Founder</div><div class="job-company">Agora Helvetica · Self-directed</div></div><span class="job-date">May 2025 – Present</span></div>
+        <ul class="job-bullets">
+          <li>Founded a <strong>politically-focused English-language newsletter</strong> based in Switzerland</li>
+          <li>Grew to <strong>2,000+ subscribers in under 3 months</strong> with a 92% average open rate</li>
+          <li>Completed <strong>Google Data Analytics Professional Certificate</strong> (SQL, R, Tableau)</li>
+          <li>Intensive self-study in <strong>AI agent optimisation, LLM workflows, and automation tools</strong></li>
+        </ul>
+        <div class="tag-wrap"><span class="tag teal">AI/LLM Workflows</span><span class="tag violet">SQL &amp; R</span><span class="tag coral">Content Strategy</span><span class="tag amber">Newsletter Growth</span></div>
+      </div></div>
 
       <div class="timeline-item"><div class="timeline-dot"></div><div class="card">
         <div class="job-header"><div><div class="job-title">Communications &amp; Partnerships Lead</div><div class="job-company">Fair Carbon · Zürich</div></div><span class="job-date">Oct 2024 – Apr 2025</span></div>
@@ -284,16 +275,15 @@
           <li><strong>Built the company's communications function from scratch</strong>, including brand, channels, and strategy</li>
           <li>Set up and configured <strong>company CRM with customer segmentation</strong></li>
           <li>Managed email, social media and website marketing channels end-to-end</li>
-          <li>Led fundraising efforts that secured <strong>$1M for the Blue Catalyst Fund</strong></li>
         </ul>
-        <div class="tag-wrap"><span class="tag teal">CRM Setup</span><span class="tag coral">Fundraising</span><span class="tag violet">Brand Building</span><span class="tag amber">Climate Tech</span></div>
+        <div class="tag-wrap"><span class="tag teal">CRM Setup</span><span class="tag coral">Partnerships</span><span class="tag violet">Brand Building</span><span class="tag amber">Climate Tech</span></div>
       </div></div>
 
       <div class="timeline-item"><div class="timeline-dot"></div><div class="card">
         <div class="job-header"><div><div class="job-title">Head of Marketing</div><div class="job-company">Drone Harmony · Zürich</div></div><span class="job-date">Feb 2024 – Oct 2024</span></div>
         <ul class="job-bullets">
           <li>Led new marketing strategy that <strong>increased website traffic by 40%</strong></li>
-          <li>Grew <strong>LinkedIn following by 36% year-on-year</strong></li>
+          <li>Grew <strong>LinkedIn following by 44%</strong></li>
           <li>Introduced CRM system and automated customer segmentation</li>
           <li>Developed the company's <strong>brand positioning and content strategy</strong></li>
         </ul>
@@ -303,8 +293,9 @@
       <div class="timeline-item"><div class="timeline-dot"></div><div class="card">
         <div class="job-header"><div><div class="job-title">Marketing Specialist</div><div class="job-company">Wingtra · Zürich</div></div><span class="job-date">Jul 2022 – Feb 2024</span></div>
         <ul class="job-bullets">
+          <li>Contributed to a <strong>~CHF 10m sales pipeline</strong> through trade shows and technical webinars</li>
           <li>Directed <strong>17 international trade exhibitions</strong>, averaging 150 MQLs per event</li>
-          <li>Hosted <strong>25 webinars</strong>, owning strategy, production, and lead follow-up end-to-end</li>
+          <li>Hosted <strong>22 webinars</strong>, owning strategy, production, and lead follow-up end-to-end</li>
           <li>Delivered <strong>public keynote speeches and technical presentations</strong> at international conferences</li>
           <li>Produced and hosted video content; managed email, social, and crisis communications</li>
           <li>Owned <strong>HubSpot CRM architecture</strong> and lead follow-up workflows</li>
@@ -313,7 +304,7 @@
       </div></div>
 
       <div class="timeline-item"><div class="timeline-dot"></div><div class="card">
-        <div class="job-header"><div><div class="job-title">R&amp;D Testing Lead</div><div class="job-company">Wingtra · Zürich</div></div><span class="job-date">Oct 2019 – Jul 2022</span></div>
+        <div class="job-header"><div><div class="job-title">Technical Product Specialist</div><div class="job-company">Wingtra · Zürich</div></div><span class="job-date">Oct 2019 – Jul 2022</span></div>
         <ul class="job-bullets">
           <li>Directed the <strong>R&amp;D testing lifecycle for drone product releases</strong></li>
           <li>Coordinated cross-functional bug investigations between engineering and commercial teams</li>
@@ -500,21 +491,6 @@
     <div class="section-header"><span class="section-icon">🌐</span><h2>Websites Built</h2><div class="section-line"></div></div>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;">
-
-      <a href="https://altispectra.com/" target="_blank" style="text-decoration:none;">
-        <div class="card" style="cursor:pointer;" onmouseover="this.style.borderColor='rgba(0,201,177,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
-            <div style="background:linear-gradient(135deg,#1A5FBF,#0d3d7a);border-radius:10px;padding:10px 13px;font-size:20px;line-height:1;">🛩️</div>
-            <span style="font-size:11px;color:var(--teal);background:rgba(0,201,177,0.1);border:1px solid rgba(0,201,177,0.25);border-radius:100px;padding:3px 10px;">Website</span>
-          </div>
-          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">Altispectra</div>
-          <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px;">I co-founded Altispectra and built the company's website from scratch, positioning an enterprise-grade drone surveying business for the Swiss construction and infrastructure market. The site communicates technical credibility (RMSE specs, coordinate systems, certifications) while remaining commercially accessible.</p>
-          <div class="tag-wrap">
-            <span class="tag teal">Web Build</span><span class="tag violet">Drone Surveying</span><span class="tag coral">Co-Founded</span>
-          </div>
-          <div style="margin-top:14px;font-size:12px;color:var(--teal);font-weight:600;">altispectra.com →</div>
-        </div>
-      </a>
 
       <a href="https://agorahelvetica.ch" target="_blank" style="text-decoration:none;">
         <div class="card" style="cursor:pointer;" onmouseover="this.style.borderColor='rgba(0,201,177,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
